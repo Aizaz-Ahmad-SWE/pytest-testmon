@@ -23,7 +23,7 @@ class TestmonDbException(Exception):
 
 def connect(datafile, readonly=False):
     return sqlite3.connect(
-        f"file:{datafile}{'?mode=ro' if readonly else ''}", uri=True, timeout=60
+        f"file:{datafile}{'?mode=ro' if readonly else ''}", uri=True, timeout=120
     )
 
 
