@@ -179,7 +179,7 @@ def init_testmon_data(config: Config):
         database=rpc_proxy,
         environment=environment,
         system_packages=system_packages,
-        readonly=get_running_as(config) == "worker",
+        readonly=False,
     )
     testmon_data.determine_stable(bool(rpc_proxy))
     config.testmon_data = testmon_data
