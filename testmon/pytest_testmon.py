@@ -141,7 +141,7 @@ def init_testmon_data(config: Config):
     environment = config.getoption("environment_expression") or eval_environment(
         config.getini("environment_expression")
     )
-    ignore_dependencies = True
+    ignore_dependencies = config.getini("testmon_ignore_dependencies")
 
     system_packages = get_system_packages(ignore=ignore_dependencies)
 
